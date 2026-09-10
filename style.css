@@ -967,3 +967,368 @@ Use this class on the profile image:
     gap: 18px;
   }
 }
+/* =========================================================
+   HERO + ABOUT — LAYOUT UPDATE
+   ========================================================= */
+
+
+/* ---------- HERO ---------- */
+
+.hero-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 70px 32px 75px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(240px, 1fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.hero-main {
+  min-width: 0;
+}
+
+.hero-intro {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 46px;
+  align-items: start;
+}
+
+
+/* FOTO MAIOR */
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 7px solid var(--paper);
+
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 18px 45px rgba(23, 59, 83, 0.14);
+}
+
+
+/* BLOCO DO NOME */
+
+.hero-heading {
+  min-width: 0;
+}
+
+.hero-heading .eyebrow {
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 6vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+
+  margin-bottom: 22px;
+}
+
+.hero-text {
+  font-size: 1.35rem;
+  max-width: 650px;
+
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  max-width: 690px;
+
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.65;
+
+  margin-bottom: 26px;
+}
+
+
+/* BOTÕES */
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  margin-bottom: 22px;
+}
+
+
+/* LINKS SOCIAIS */
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  margin-top: 5px;
+}
+
+.hero-social a {
+  position: relative;
+
+  color: var(--navy-dark);
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  padding-left: 15px;
+
+  transition: color 0.2s ease;
+}
+
+.hero-social a::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+
+  transform: translateY(-50%);
+}
+
+.hero-social a:hover {
+  color: var(--gold);
+}
+
+
+/* LADO DIREITO DO HERO */
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 260px;
+
+  padding-left: 35px;
+
+  border-left: 1px solid var(--border);
+}
+
+.hero-quote {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+
+  color: var(--text-soft);
+
+  font-size: 1.45rem;
+  line-height: 1.45;
+}
+
+.hero-side .gold-line {
+  width: 70px;
+
+  margin-top: 30px;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+
+  gap: 80px;
+  align-items: start;
+}
+
+
+/* COLUNA DA ESQUERDA */
+
+.about-intro {
+  padding-right: 55px;
+
+  border-right: 1px solid var(--border);
+}
+
+.about-intro h2 {
+  margin-bottom: 20px;
+}
+
+.about-intro .gold-line {
+  margin: 0 0 28px;
+}
+
+.about-text {
+  max-width: none;
+
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+.about-text p {
+  margin-bottom: 13px;
+}
+
+
+/* COLUNA DA DIREITA */
+
+.about-pillars {
+  padding-top: 2px;
+}
+
+.about-pillars > .section-label {
+  margin-bottom: 16px;
+}
+
+
+/* CADA PILAR */
+
+.pillar-item {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 24px;
+
+  align-items: center;
+
+  padding: 27px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.pillar-item:last-child {
+  border-bottom: none;
+}
+
+
+/* NÚMEROS REDONDOS */
+
+.pillar-number {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--cream-dark);
+
+  color: var(--gold);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+/* TEXTO DOS PILARES */
+
+.pillar-item h3 {
+  color: var(--navy-dark);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+
+  margin-bottom: 5px;
+}
+
+.pillar-item p {
+  color: var(--text-soft);
+
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .hero-intro {
+    grid-template-columns: 160px 1fr;
+
+    gap: 30px;
+  }
+
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-side {
+    min-height: auto;
+
+    border-left: 0;
+    border-top: 1px solid var(--border);
+
+    padding: 30px 0 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .about-intro {
+    padding-right: 0;
+
+    border-right: 0;
+  }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+  .hero-container {
+    padding: 55px 20px;
+  }
+
+  .hero-intro {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .profile-photo {
+    width: 135px;
+    height: 135px;
+  }
+
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+
+  .hero-social {
+    gap: 17px;
+    flex-wrap: wrap;
+  }
+
+  .pillar-item {
+    grid-template-columns: 48px 1fr;
+
+    gap: 18px;
+  }
+
+  .pillar-number {
+    width: 42px;
+    height: 42px;
+  }
+
+}
