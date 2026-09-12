@@ -582,7 +582,19 @@ Use this class on the profile image:
 .project-links a:hover {
   color: var(--terracotta);
 }
+/* ---------- OLIST PROJECT ---------- */
 
+.olist-project {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+.olist-visual img {
+  object-position: center 62%;
+}
+
+.olist-project .project-category {
+  color: var(--terracotta);
+}
 
 /* =========================================================
    SKILLS
