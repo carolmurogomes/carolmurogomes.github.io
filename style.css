@@ -605,7 +605,29 @@ Use this class on the profile image:
 .olist-project .project-category {
   color: var(--terracotta);
 }
+/* ---------- AIRBNB PROJECT ---------- */
 
+.airbnb-project {
+    grid-template-columns: 1.05fr 0.95fr;
+}
+
+.airbnb-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F7E8E5;
+}
+
+.airbnb-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.airbnb-project .project-category {
+    color: var(--terracotta);
+}
 /* =========================================================
    SKILLS
    ========================================================= */
