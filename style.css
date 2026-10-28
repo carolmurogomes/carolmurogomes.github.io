@@ -1376,3 +1376,38 @@ Use this class on the profile image:
   }
 
 }
+
+/* 2026 portfolio update */
+.navbar {gap:14px;}
+.nav-cv-button {white-space:nowrap;}
+.cv-pt {background:transparent!important;color:var(--navy)!important;border:1px solid var(--gold)!important;}
+.profile-frame {position:relative;width:230px;min-height:254px;display:flex;align-items:flex-end;justify-content:center;isolation:isolate;}
+.profile-cover {position:absolute;inset:0 0 24px 0;border-radius:18px;background:linear-gradient(125deg,#102b3c 0%,#31576e 52%,#b58a4b 100%);box-shadow:0 18px 40px rgba(23,59,83,.15);z-index:-1;overflow:hidden;}
+.profile-cover::after {content:'';position:absolute;width:220px;height:220px;border:1px solid rgba(248,244,236,.22);border-radius:50%;top:-95px;right:-75px;}
+.profile-frame .profile-photo {width:190px;height:190px;margin-bottom:0;object-position:center 38%;} 
+.weg-project {margin-bottom:34px;}
+.weg-visual {display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#102b3c,#31576e);}
+.weg-visual::after {display:none;}
+.weg-art {width:100%;padding:52px 40px;color:#f8f4ec;display:flex;flex-direction:column;gap:20px;position:relative;}
+.weg-kicker {font-size:.72rem;letter-spacing:.22em;color:#d5b378;}
+.weg-art strong {font:normal clamp(4rem,8vw,7rem) Georgia,serif;letter-spacing:.08em;}
+.weg-art > span:nth-of-type(2) {font-size:1rem;line-height:2;color:#eee8dc;}
+.weg-bars {height:90px;display:flex;align-items:end;gap:12px;border-bottom:1px solid rgba(255,255,255,.35);margin-top:22px;}
+.weg-bars i {flex:1;display:block;background:#b58a4b;opacity:.9;}
+.weg-bars i:nth-child(1){height:28%}.weg-bars i:nth-child(2){height:45%}.weg-bars i:nth-child(3){height:38%}.weg-bars i:nth-child(4){height:65%}.weg-bars i:nth-child(5){height:74%}.weg-bars i:nth-child(6){height:92%}
+.project-links {gap:12px 20px;}
+@media(max-width:1050px){.navbar{flex-wrap:wrap;justify-content:center}.nav-links{gap:15px}}
+@media(max-width:900px){.profile-frame{width:220px}}
+@media(max-width:600px){.profile-frame{width:200px;min-height:220px}.profile-frame .profile-photo{width:170px;height:170px}.navbar{justify-content:space-between}.nav-cv-button{font-size:.72rem;padding:8px 10px}.cv-pt{display:inline-flex}.hero-intro{grid-template-columns:1fr}.weg-art{padding:35px 25px}}
+
+/* Project photography and wide editorial banner — 2026 */
+.portfolio-banner {max-width:var(--max-width);margin:30px auto 0;padding:0 32px;}
+.portfolio-banner img {width:100%;height:auto;display:block;border-radius:16px;box-shadow:var(--shadow-card);}
+.weg-visual {background:#073b7a;}
+.weg-visual img {width:100%;height:100%;object-fit:contain;object-position:center;background:#073b7a;}
+.weg-visual::after {display:none;}
+.weg-visual .weg-art {display:none;}
+.weg-project .project-visual {min-height:360px;}
+#projects .featured-project:not(.weg-project):not(.olist-project):not(.airbnb-project) .project-visual img {object-fit:contain;background:#0c2a42;}
+@media(max-width:900px){.portfolio-banner{margin-top:20px;padding:0 24px}.weg-project .project-visual{min-height:260px}}
+@media(max-width:600px){.portfolio-banner{margin-top:12px;padding:0 20px}.portfolio-banner img{border-radius:10px}.weg-project .project-visual{min-height:190px}}
