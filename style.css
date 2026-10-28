@@ -1411,3 +1411,17 @@ Use this class on the profile image:
 #projects .featured-project:not(.weg-project):not(.olist-project):not(.airbnb-project) .project-visual img {object-fit:contain;background:#0c2a42;}
 @media(max-width:900px){.portfolio-banner{margin-top:20px;padding:0 24px}.weg-project .project-visual{min-height:260px}}
 @media(max-width:600px){.portfolio-banner{margin-top:12px;padding:0 20px}.portfolio-banner img{border-radius:10px}.weg-project .project-visual{min-height:190px}}
+
+/* ===== 2026 visual refinement: integrated banner + portrait ===== */
+.portfolio-banner{position:relative;max-width:var(--max-width);margin:28px auto 0;padding:0 32px 0;}
+.portfolio-banner>img{width:100%;height:auto;display:block;border-radius:18px;}
+.portfolio-banner .profile-frame{position:absolute;z-index:4;left:clamp(52px,7vw,120px);bottom:-76px;width:170px;height:170px;min-height:0;display:block;}
+.portfolio-banner .profile-frame .profile-photo{width:170px;height:170px;display:block;margin:0;border:7px solid var(--paper);border-radius:50%;object-fit:cover;object-position:center 36%;box-shadow:0 10px 30px rgba(10,38,55,.23);}
+.hero-container{display:block;max-width:var(--max-width);padding:100px 32px 66px;}
+.hero-intro{display:block;}
+.hero-main{max-width:880px;margin-left:clamp(0px,19vw,240px);}
+.hero-heading .hero-text{font-size:clamp(1.65rem,3vw,2.7rem);line-height:1.22;max-width:780px;color:var(--navy);margin:0 0 18px;font-family:Georgia,serif;}
+.hero-heading .hero-description{max-width:750px;line-height:1.75;}
+.about-text p{line-height:1.8;}
+@media(max-width:900px){.portfolio-banner .profile-frame{left:56px;bottom:-58px;width:130px;height:130px}.portfolio-banner .profile-frame .profile-photo{width:130px;height:130px}.hero-container{padding-top:83px}.hero-main{margin-left:0}}
+@media(max-width:600px){.portfolio-banner{padding:0 16px;margin-top:12px}.portfolio-banner .profile-frame{left:30px;bottom:-45px;width:98px;height:98px}.portfolio-banner .profile-frame .profile-photo{width:98px;height:98px;border-width:5px}.hero-container{padding:70px 20px 48px}.hero-heading .hero-text{font-size:1.8rem}.hero-heading .hero-description{font-size:1rem}}
