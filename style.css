@@ -1425,3 +1425,20 @@ Use this class on the profile image:
 .about-text p{line-height:1.8;}
 @media(max-width:900px){.portfolio-banner .profile-frame{left:56px;bottom:-58px;width:130px;height:130px}.portfolio-banner .profile-frame .profile-photo{width:130px;height:130px}.hero-container{padding-top:83px}.hero-main{margin-left:0}}
 @media(max-width:600px){.portfolio-banner{padding:0 16px;margin-top:12px}.portfolio-banner .profile-frame{left:30px;bottom:-45px;width:98px;height:98px}.portfolio-banner .profile-frame .profile-photo{width:98px;height:98px;border-width:5px}.hero-container{padding:70px 20px 48px}.hero-heading .hero-text{font-size:1.8rem}.hero-heading .hero-description{font-size:1rem}}
+
+/* 2026 final polish — large portrait inside the left side of the banner */
+.portfolio-banner .profile-frame{left:clamp(85px,13vw,210px);bottom:clamp(20px,3.4vw,54px);width:clamp(200px,20vw,285px);height:clamp(200px,20vw,285px);}
+.portfolio-banner .profile-frame .profile-photo{width:100%;height:100%;border:7px solid #f9f5ed;box-shadow:0 16px 42px rgba(10,38,55,.27);}
+.hero-container{padding-top:clamp(35px,5vw,70px);}
+.hero-main{max-width:none;margin-left:0;}
+.hero-heading .hero-text{font-size:clamp(2rem,4.1vw,4.4rem);line-height:1.12;max-width:none;letter-spacing:-.025em;text-wrap:balance;}
+.hero-heading .hero-description{max-width:950px;}
+@media(max-width:900px){.portfolio-banner .profile-frame{left:10%;bottom:9%;width:24%;height:auto;aspect-ratio:1}.hero-container{padding-top:45px}.hero-heading .hero-text{font-size:clamp(2rem,4.8vw,3.4rem)}}
+@media(max-width:600px){.portfolio-banner .profile-frame{left:7%;bottom:7%;width:28%;height:auto;aspect-ratio:1}.portfolio-banner .profile-frame .profile-photo{border-width:4px}.hero-container{padding-top:35px}.hero-heading .hero-text{font-size:clamp(1.8rem,6.4vw,2.7rem)}}
+
+/* Language selector — bilingual portfolio */
+.language-switch {display:flex;align-items:center;gap:3px;padding:4px;border:1px solid rgba(18,51,70,.22);border-radius:999px;margin-left:12px;white-space:nowrap;background:rgba(255,255,255,.55)}
+.lang-option {font:inherit;font-size:.78rem;letter-spacing:.07em;font-weight:700;cursor:pointer;border:0;border-radius:999px;background:transparent;color:#16384c;padding:8px 12px;min-width:42px;min-height:36px}
+.lang-option.active {background:#173c51;color:#fff}
+.lang-option:focus-visible {outline:2px solid #bc8e49;outline-offset:3px}
+@media(max-width:850px){.navbar{flex-wrap:wrap;gap:8px}.language-switch{margin-left:auto}.lang-option{padding:7px 10px}}
